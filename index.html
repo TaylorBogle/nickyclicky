@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBNoSwag</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/images2.jpg">
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="images/di6vs773hy491.jpg" alt="Image 1" class="slide active">
+            <img src="images/EK-mIWIXkAErgYe.jpg" alt="Image 2" class="slide">
+            <img src="images/F8liQdmXUAAJIV1.jpg" alt="Image 3" class="slide">
+            <!-- Add more <img> tags here for additional slides, replacing src with your image URLs or local paths -->
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <!-- Add more <span class="dot"> for additional slides -->
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
