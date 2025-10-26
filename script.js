@@ -9,6 +9,14 @@ function showSlide(index) {
     
     slides[index].classList.add('active');
     dots[index].classList.add('active');
+
+    // Track slide change event
+    if (window.appInsights) {
+        appInsights.trackEvent({
+            name: "SlideChanged",
+            properties: { index }
+        });
+    }
 }
 
 function changeSlide(direction) {
