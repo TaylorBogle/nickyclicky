@@ -29,12 +29,15 @@ body {
 
 /* Homepage Carousel Layout */
 body.home-page {
+    background: #f0f0f0;
+    /* overflow: hidden; Removed to allow scrolling if content overflows */
+}
+
+.carousel-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
-    background: #f0f0f0;
 }
 
 .carousel {
@@ -57,19 +60,20 @@ body.home-page {
     min-width: 100%;
     height: 100%;
     object-fit: contain;
-    visibility: hidden;
     opacity: 0;
     position: absolute;
     padding: 20px;
     box-sizing: border-box;
     transition: opacity 0.5s;
+    visibility: hidden;
 }
 
 .slide.active {
     visibility: visible;
     opacity: 1;
-    position: relative;
     display: block;
+    z-index: 2;
+    position: relative;
 }
 
 .prev,
