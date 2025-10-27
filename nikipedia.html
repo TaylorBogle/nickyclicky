@@ -6,130 +6,6 @@
   <title>Nick Turani – Nikipedia</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="images/images2.jpg" />
-  <style>
-    body.nikipedia {
-      font-family: Georgia, serif;
-      background: #f8f9fa;
-      color: #202122;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .navbar {
-      background: #222;
-      padding: 12px 24px;
-      margin-bottom: 1rem;
-    }
-
-    .nav-link {
-      color: #eee;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: bold;
-    }
-
-    .nav-link.active {
-      color: #00ffcc;
-    }
-
-    .tabs {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-      color: #3366cc;
-    }
-
-    .tabs span {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-size: 2rem;
-      border-bottom: 1px solid #a2a9b1;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .layout {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .contents-box {
-      width: 200px;
-      font-size: 0.9rem;
-      background: #fff;
-      border: 1px solid #a2a9b1;
-      padding: 1rem;
-      height: fit-content;
-    }
-
-    .contents-box h3 {
-      margin-top: 0;
-      font-size: 1rem;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .contents-box ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .contents-box li {
-      margin-bottom: 0.5rem;
-    }
-
-    .contents-box a {
-      color: #3366cc;
-      text-decoration: none;
-    }
-
-    .contents-box a:hover {
-      text-decoration: underline;
-    }
-
-    .article-content {
-      flex: 1;
-      max-width: 800px;
-    }
-
-    .wikibox {
-      border: 1px solid #a2a9b1;
-      background: #f5f5f5;
-      padding: 1rem;
-      float: right;
-      width: 250px;
-      margin-left: 2rem;
-      font-size: 0.9rem;
-    }
-
-    .wikibox h3 {
-      font-size: 1rem;
-      margin-top: 1rem;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .citation-needed {
-      color: #3366cc;
-      font-size: 0.8rem;
-      margin-left: 4px;
-    }
-
-    .references {
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-    }
-  </style>
 </head>
 <body class="nikipedia">
   <nav class="navbar">
@@ -164,23 +40,51 @@
 
     <!-- Article -->
     <article class="article-content">
-      <div class="wikibox">
-        <strong>Born:</strong> Wheeling, West Virginia<br>
-        <strong>Known for:</strong> Barstool Sports, The Yak, A New Untold Story<br>
-        <strong>Height:</strong> 6'0"<br>
-        <strong>Occupation:</strong> Podcaster, Comedian, Editor<br>
-        <strong>Years active:</strong> 2019–present<br>
-        <strong>Nickname:</strong> TBD
-
-        <h3>Nick-related articles</h3>
-        <ul>
-          <li><a href="#">KB NoSwag</a></li>
-          <li><a href="#">The Yak</a></li>
-          <li><a href="#">A New Untold Story</a></li>
-          <li><a href="#">The Bracket</a></li>
-          <li><a href="#">Rough N’ Rowdy</a></li>
-        </ul>
-      </div>
+      <table class="infobox">
+        <tbody>
+          <tr class="header">
+            <th colspan="2">Nick Turani</th>
+          </tr>
+          <tr>
+            <th>Born</th>
+            <td>Wheeling, West Virginia</td>
+          </tr>
+          <tr>
+            <th>Known for</th>
+            <td>Barstool Sports, The Yak, A New Untold Story</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>6'0"</td>
+          </tr>
+          <tr>
+            <th>Occupation</th>
+            <td>Podcaster, Comedian, Editor</td>
+          </tr>
+          <tr>
+            <th>Years active</th>
+            <td>2019–present</td>
+          </tr>
+          <tr>
+            <th>Nickname</th>
+            <td>TBD</td>
+          </tr>
+          <tr class="section-header">
+            <th colspan="2">Nick-related articles</th>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li><a href="#">KB NoSwag</a></li>
+                <li><a href="#">The Yak</a></li>
+                <li><a href="#">A New Untold Story</a></li>
+                <li><a href="#">The Bracket</a></li>
+                <li><a href="#">Rough N’ Rowdy</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <p><strong>Nick Turani</strong> is an American podcaster and content creator best known for his work with Barstool Sports. He co-hosts <em>A New Untold Story</em> with KB NoSwag and is a regular contributor to <em>The Yak</em>. His style blends dry humor, surreal sketches, and deadpan delivery.</p>
 
@@ -214,11 +118,15 @@
       </ul>
 
       <h2 id="legacy">Legacy</h2>
-      <p>Though still early in his career, Turani has cultivated a dedicated fanbase and influenced a new wave of surreal comedy within podcasting circles. His unique blend of humor and persona continues to inspire emerging creators.</p>
+      <p>Turani’s work at Barstool Sports is characterized by its unpredictability and commitment to absurdity. His influence is felt across multiple shows and formats, particularly in the blending of satire and sincerity.</p>
 
       <h2 id="references">References</h2>
-      <ol>
-        <li>Barstool Sports official website and podcast archives.</li>
+      <ol class="references">
+        <li>Barstool Sports – <em>The Yak</em> archives</li>
+        <li><em>A New Untold Story</em> YouTube channel</li>
+        <li>West Virginia Cross Country Results Archive (2006)</li>
+        <li>Barstool Bracket episodes (2025)</li>
+        <li>Wake Up Mintzy guest appearance – Barstool Clips</li>
       </ol>
     </article>
   </div>
