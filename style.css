@@ -1,22 +1,49 @@
+/* Global Reset */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background: #222;
+    padding: 12px 24px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link.active {
+    color: #00ffcc;
+}
+
+/* Homepage Carousel Layout */
+body.home-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f0f0f0; /* Optional: light gray background for contrast */
+    overflow: hidden;
+    background: #f0f0f0;
 }
 
 .carousel {
     position: relative;
-    width: 90vw; /* Reduced width */
-    height: 80vh; /* Reduced height */
-    max-width: 1200px; /* Optional: cap for very wide screens */
+    width: 90vw;
+    height: 80vh;
+    max-width: 1200px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-container {
@@ -29,17 +56,24 @@ body {
 .slide {
     min-width: 100%;
     height: 100%;
-    object-fit: contain; /* Show full image, preserve aspect ratio */
-    display: none;
-    padding: 20px; /* Add padding to center image within slide */
+    object-fit: contain;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 20px;
     box-sizing: border-box;
+    transition: opacity 0.5s;
 }
 
 .slide.active {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
     display: block;
 }
 
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -60,7 +94,8 @@ body {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -91,17 +126,81 @@ body {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/* Stats Page Layout */
+body.stats-page {
+    background: #fff;
+    padding: 0;
+    overflow: auto;
+}
+
+.stats-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.stat-block {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-block h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.stat-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.stat-block li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .carousel {
-        width: 95vw; /* Slightly wider on mobile */
-        height: 70vh; /* Shorter to fit mobile screens */
+        width: 95vw;
+        height: 70vh;
     }
 
     .slide {
-        padding: 10px; /* Smaller padding on mobile */
+        padding: 10px;
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         padding: 12px;
         font-size: 16px;
     }
@@ -114,5 +213,9 @@ body {
     .dot {
         width: 10px;
         height: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,20 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NickyClicky.com</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/images2.jpg">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/images2.jpg" />
 </head>
-<body>
+
+<body class="home-page">
+    <nav class="navbar">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="stats.html" class="nav-link">Stats</a>
+    </nav>
+
     <div class="carousel">
         <div class="carousel-container">
-            <img src="images/di6vs773hy491.jpg" alt="Image 1" class="slide active">
-            <img src="images/EK-mIWIXkAErgYe.jpg" alt="Image 2" class="slide">
-            <img src="images/F8liQdmXUAAJIV1.jpg" alt="Image 3" class="slide">
-            <!-- Add more <img> tags here for additional slides, replacing src with your image URLs or local paths -->
+            <img src="images/di6vs773hy491.jpg" alt="Image 1" class="slide active" />
+            <img src="images/EK-mIWIXkAErgYe.jpg" alt="Image 2" class="slide" />
+            <img src="images/F8liQdmXUAAJIV1.jpg" alt="Image 3" class="slide" />
         </div>
         <button class="prev" onclick="changeSlide(-1)">❮</button>
         <button class="next" onclick="changeSlide(1)">❯</button>
@@ -22,33 +27,10 @@
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-            <!-- Add more <span class="dot"> for additional slides -->
         </div>
     </div>
+
     <script defer src="script.js"></script>
-    <script type="text/javascript">
-  var appInsights = window.appInsights || function (config) {
-    function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } }
-    var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f;
-    s.src = config.url || "https://js.monitor.azure.com/scripts/b/ai.js"; // ✅ Updated CDN
-    u.getElementsByTagName(o)[0].parentNode.appendChild(s);
-    t.cookie = u.cookie; t.queue = []; i = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"];
-    while (i.length) r("track" + i.pop());
-    r("setAuthenticatedUserContext"); r("clearAuthenticatedUserContext"); r("flush");
-    if (!config.disableExceptionTracking) {
-      i = "onerror"; r("_" + i); f = e[i]; e[i] = function (config, r, u, e, o) {
-        var s = f && f(config, r, u, e, o); t["_" + i](config, r, u, e, o); return s;
-      };
-    }
-    return t;
-  }({
-    instrumentationKey: "7b8e57e2-2d3f-417c-b7da-429a6699b1ea"
-  });
-
-  window.appInsights = appInsights;
-  appInsights.trackPageView();
-</script>
-
-
 </body>
+
 </html>
