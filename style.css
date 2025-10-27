@@ -205,6 +205,58 @@ body.stats-page {
     color: #333;
 }
 
+body.nikipedia {
+  font-family: "Georgia", serif;
+  background: #f8f9fa;
+  color: #202122;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.contents-box {
+  width: 200px;
+  font-size: 0.9rem;
+  background: #fff;
+  border: 1px solid #a2a9b1;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.contents-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.contents-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contents-box li {
+  margin-bottom: 0.5rem;
+}
+
+.contents-box a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.contents-box a:hover {
+  text-decoration: underline;
+}
+
+.article-content {
+  flex: 1;
+  max-width: 800px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .carousel {
