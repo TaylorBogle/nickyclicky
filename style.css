@@ -194,13 +194,24 @@ body.stats-page {
     color: #888;
 }
 
+.page-header {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .carousel {
         width: 95vw;
         height: 70vh;
     }
-    
+
     @media (max-width: 1024px) and (min-width: 769px) {
         .carousel {
             height: 75vh;
