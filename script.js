@@ -66,7 +66,7 @@ if (document.querySelector('.carousel')) {
             pauseAutoAdvance();
         });
     });
-    // No need for separate pause handler on arrow click since changeSlide now pauses auto-advance
+    // No need for separate pause handler on arrow click since changeSlide now pauses auto-advance.
 
     // Initialize first slide
     showSlide(currentSlideIndex);
