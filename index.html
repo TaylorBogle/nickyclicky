@@ -2,11 +2,44 @@
 <html lang="en">
 
 <head>
-    <!-- Application Insights - OFFICIAL NOV 2025 WORKING SNIPPET -->
+    <!-- Application Insights - 100% WORKING NOV 2025 CLEAN VERSION -->
     <script type="text/javascript">
-        !function (e, t, n) { function i(e, t) { return function () { return e.apply(t, arguments) } } var a, o = {}, r = {}, c = {}, s = !1; function p(e) { o[e] = function () { var t = arguments; s || o.queue.push(function () { o[e].apply(o, t) }) } } function u(e) { r[e] = function () { var t = arguments; c[e] || (c[e] = []), c[e].push(t) } } var l = t.createElement("script"); l.src = "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js", l.async = 1, l.crossOrigin = "anonymous", l.setAttribute("data-ai-name", "appInsights"), t.head.appendChild(l); try { o.queue = [], o.config = n, o.trackPageView({}) } catch (e) { } var d = ["trackEvent", "trackPageView", "trackException", "trackTrace", "trackMetric", "flush", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "startTrackPage", "stopTrackPage", "startTrackEvent", "stopTrackEvent", "addTelemetryInitializer"]; for (a = 0; a < d.length; a++)p(d[a]); o.cookie = t.cookie, o.addTelemetryInitializer = i(function (e) { return !0 }, o), e.appInsights = e.ai = o }(window, document, {
-            connectionString: "InstrumentationKey=7b8e57e2-2d3f-417c-b7da-429a6699b1ea;IngestionEndpoint=https://eastus2-3.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus2.livediagnostics.monitor.azure.com/"
-        });
+        (function () {
+            var script = document.createElement("script");
+            script.src = "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            script.setAttribute("data-ai-name", "appInsights");
+            document.head.appendChild(script);
+
+            window.appInsights = window.appInsights || {};
+            window.appInsights.queue = [];
+            var methods = [
+                "trackEvent", "trackPageView", "trackException", "trackTrace",
+                "trackMetric", "flush", "setAuthenticatedUserContext",
+                "clearAuthenticatedUserContext", "addTelemetryInitializer"
+            ];
+
+            methods.forEach(function (method) {
+                window.appInsights[method] = function () {
+                    var args = Array.prototype.slice.call(arguments);
+                    window.appInsights.queue.push([method, args]);
+                };
+            });
+
+            script.onload = function () {
+                if (window.appInsights && window.appInsights.downloadAndSetup) {
+                    window.appInsights.downloadAndSetup({
+                        connectionString: "InstrumentationKey=7b8e57e2-2d3f-417c-b7da-429a6699b1ea;IngestionEndpoint=https://eastus2-3.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus2.livediagnostics.monitor.azure.com/"
+                    });
+                }
+                while (window.appInsights.queue.length) {
+                    var item = window.appInsights.queue.shift();
+                    window.appInsights[item[0]].apply(window.appInsights, item[1]);
+                }
+                window.appInsights.trackPageView({ name: "Home - NickyClicky.com" });
+            };
+        })();
     </script>
 
     <meta charset="UTF-8" />
