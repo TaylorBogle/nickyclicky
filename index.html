@@ -2,6 +2,46 @@
 <html lang="en">
 
 <head>
+    <!-- Application Insights - Updated for SDK v3.x (Nov 2025) -->
+    <script type="text/javascript">
+        (function () {
+            var script = document.createElement("script");
+            script.src = "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            script.setAttribute("data-ai-name", "appInsights");
+            document.head.appendChild(script);
+
+            window.appInsights = {
+                config: {
+                    connectionString: "InstrumentationKey=7b8e57e2-2d3f-417c-b7da-429a6699b1ea;IngestionEndpoint=https://eastus2-3.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus2.livediagnostics.monitor.azure.com/",
+                    enableAutoRouteTracking: true,
+                    enableDebug: false
+                },
+                queue: [],
+                trackEvent: function () { this.queue.push(["trackEvent", arguments]); },
+                trackPageView: function () { this.queue.push(["trackPageView", arguments]); },
+                trackException: function () { this.queue.push(["trackException", arguments]); },
+                trackTrace: function () { this.queue.push(["trackTrace", arguments]); },
+                trackMetric: function () { this.queue.push(["trackMetric", arguments]); },
+                flush: function () { this.queue.push(["flush", arguments]); },
+                setAuthenticatedUserContext: function () { this.queue.push(["setAuthenticatedUserContext", arguments]); },
+                clearAuthenticatedUserContext: function () { this.queue.push(["clearAuthenticatedUserContext", arguments]); },
+                addTelemetryInitializer: function () { this.queue.push(["addTelemetryInitializer", arguments]); }
+            };
+
+            script.onload = function () {
+                if (window.appInsights && window.appInsights.core) return; // Already initialized
+
+                var aiName = script.getAttribute("data-ai-name");
+                if (window[aiName] && window[aiName].initialize) {
+                    window[aiName].initialize(window.appInsights.config, window.appInsights.queue);
+                    window[aiName].trackPageView({ name: "Home - NickyClicky.com" });
+                }
+            };
+        })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NickyClicky.com</title>
@@ -39,6 +79,5 @@
 
     <script defer src="script.js"></script>
 </body>
-
 
 </html>
