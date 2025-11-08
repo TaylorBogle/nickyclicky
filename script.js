@@ -74,3 +74,18 @@ if (document.querySelector('.carousel')) {
     // Start auto-advance
     startAutoAdvance();
 }
+
+// NickyClicky.com - Carousel Analytics (Clarity)
+document.querySelectorAll('.next, .prev, .dot').forEach(btn => {
+    btn.addEventListener('click', () => {
+        clarity('event', 'Carousel Click');
+        clarity('set', 'page', 'Home - Carousel');
+    });
+});
+
+// Track navigation clicks
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        clarity('event', 'Nav Click: ' + link.textContent.trim());
+    });
+});
