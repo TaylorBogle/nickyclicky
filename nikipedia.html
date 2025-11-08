@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,7 @@
 
   <!-- CLARITY + PLAUSIBLE -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "u32pk8y0oh");
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "u32pk8y0oh");
   </script>
   <script defer data-domain="nickyclicky.com" src="https://plausible.io/js/script.js"></script>
 
@@ -32,12 +33,14 @@
 
     .navbar {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       background: #222;
       padding: 1rem 0;
       text-align: center;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .nav-link {
@@ -55,7 +58,9 @@
       color: #000;
     }
 
-    .nav-link:hover { background: rgba(255,255,255,0.2); }
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
     .tabs {
       background: #eaecf0;
@@ -87,7 +92,8 @@
 
     /* MOBILE-FIRST LAYOUT */
     .layout {
-      display: block; /* Changed from flex */
+      display: block;
+      /* Changed from flex */
     }
 
     .contents-box {
@@ -116,18 +122,21 @@
       text-decoration: none;
     }
 
-    .contents-box a:hover { text-decoration: underline; }
+    .contents-box a:hover {
+      text-decoration: underline;
+    }
 
     .article-content {
       background: white;
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
     .article-body {
-      display: block; /* Stack infobox on top */
+      display: block;
+      /* Stack infobox on top */
     }
 
     .infobox {
@@ -140,7 +149,8 @@
       border: 1px solid var(--border);
     }
 
-    .infobox th, .infobox td {
+    .infobox th,
+    .infobox td {
       padding: 0.6rem 0.8rem;
       border-bottom: 1px solid var(--border);
     }
@@ -167,17 +177,37 @@
 
     /* MOBILE OPTIMIZATIONS */
     @media (max-width: 768px) {
-      .navbar { padding: 0.8rem 0; }
-      .nav-link { 
-        font-size: 1rem; 
-        padding: 0.5rem 0.9rem; 
+      .navbar {
+        padding: 0.8rem 0;
+      }
+
+      .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0.9rem;
         margin: 0 0.4rem;
       }
-      h1 { font-size: 2rem; }
-      .tabs { font-size: 0.85rem; padding: 0.6rem 0.5rem; }
-      .tabs span { margin: 0 0.7rem; }
-      .nikipedia-container { padding: 0 0.8rem; margin: 1rem auto; }
-      .article-content { padding: 1rem; }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .tabs {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.5rem;
+      }
+
+      .tabs span {
+        margin: 0 0.7rem;
+      }
+
+      .nikipedia-container {
+        padding: 0 0.8rem;
+        margin: 1rem auto;
+      }
+
+      .article-content {
+        padding: 1rem;
+      }
     }
 
     @media (min-width: 769px) {
@@ -185,6 +215,7 @@
         display: flex;
         gap: 2rem;
       }
+
       .contents-box {
         width: 220px;
         flex-shrink: 0;
@@ -192,10 +223,12 @@
         top: 80px;
         height: fit-content;
       }
+
       .article-body {
         display: flex;
         gap: 2rem;
       }
+
       .infobox {
         width: 280px !important;
         flex-shrink: 0;
@@ -203,6 +236,7 @@
     }
   </style>
 </head>
+
 <body class="nikipedia">
 
   <nav class="navbar">
@@ -238,29 +272,43 @@
       <article class="article-content">
         <div class="article-body">
           <div class="main-text">
-            <p><strong>Nick Turani</strong> is an American podcaster and content creator best known for his work with Barstool Sports. He co-hosts <em>A New Untold Story</em> with KB NoSwag and is a regular contributor to <em>The Yak</em>. His style blends dry humor, surreal sketches, and deadpan delivery.</p>
+            <p><strong>Nick Turani</strong> is an American podcaster and content creator best known for his work with
+              Barstool Sports. He co-hosts <em>A New Untold Story</em> with KB NoSwag and is a regular contributor to
+              <em>The Yak</em>. His style blends dry humor, surreal sketches, and deadpan delivery.</p>
 
             <h2 id="early-life">Early Life</h2>
-            <p>Turani was born in Wheeling, West Virginia. He ran cross country in high school, recording a personal best of 25:41.5 in the 5K at the Wild and Wet Invitational in 2006<span class="citation-needed">[citation needed]</span>. He attended the same school as KB NoSwag, though their friendship developed later.</p>
+            <p>Turani was born in Wheeling, West Virginia. He ran cross country in high school, recording a personal
+              best of 25:41.5 in the 5K at the Wild and Wet Invitational in 2006<span class="citation-needed">[citation
+                needed]</span>. He attended the same school as KB NoSwag, though their friendship developed later.</p>
 
             <h2 id="career">Career</h2>
-            <p>Turani joined Barstool Sports in 2019. Initially hired for graphic design, he transitioned to on-camera roles after submitting a portfolio of Photoshop memes<span class="citation-needed">[citation needed]</span>. He has since appeared in multiple Barstool shows and podcasts.</p>
+            <p>Turani joined Barstool Sports in 2019. Initially hired for graphic design, he transitioned to on-camera
+              roles after submitting a portfolio of Photoshop memes<span class="citation-needed">[citation
+                needed]</span>. He has since appeared in multiple Barstool shows and podcasts.</p>
             <ul>
               <li><strong>The Yak:</strong> A daily live show featuring improvisational comedy and recurring bits.</li>
-              <li><strong>A New Untold Story:</strong> A podcast known for its unconventional format and surreal humor.</li>
-              <li><strong>The Bracket:</strong> A debate-style show ranking topics such as “Best Empire” and “Worst Smell.”</li>
+              <li><strong>A New Untold Story:</strong> A podcast known for its unconventional format and surreal humor.
+              </li>
+              <li><strong>The Bracket:</strong> A debate-style show ranking topics such as “Best Empire” and “Worst
+                Smell.”</li>
               <li><strong>Rough N’ Rowdy:</strong> Turani serves as a ringside reporter, often in costume.</li>
             </ul>
 
             <h2 id="controversies">Controversies</h2>
             <ul>
-              <li><strong>Wake Up Mintzy Appearance:</strong> Turani’s guest spot on the revived <em>Wake Up Mintzy</em> drew attention due to the show’s prior cancellation and chaotic tone.</li>
-              <li><strong>Bracket Rankings:</strong> His inclusion of “gluten allergies” and “the HBO logo” in a “Most Hated Things” bracket sparked debate among fans<span class="citation-needed">[citation needed]</span>.</li>
-              <li><strong>Wheeling Origin Dispute:</strong> Some fans question whether Turani and KB actually grew up together or if it’s a long-running bit<span class="citation-needed">[citation needed]</span>.</li>
+              <li><strong>Wake Up Mintzy Appearance:</strong> Turani’s guest spot on the revived <em>Wake Up Mintzy</em>
+                drew attention due to the show’s prior cancellation and chaotic tone.</li>
+              <li><strong>Bracket Rankings:</strong> His inclusion of “gluten allergies” and “the HBO logo” in a “Most
+                Hated Things” bracket sparked debate among fans<span class="citation-needed">[citation needed]</span>.
+              </li>
+              <li><strong>Wheeling Origin Dispute:</strong> Some fans question whether Turani and KB actually grew up
+                together or if it’s a long-running bit<span class="citation-needed">[citation needed]</span>.</li>
             </ul>
 
             <h2 id="style">Style and Persona</h2>
-            <p>Turani is known for his dry delivery and commitment to character. He frequently uses invented metrics such as “Confusion Index” and “Laugh Velocity” to describe content<span class="citation-needed">[citation needed]</span>.</p>
+            <p>Turani is known for his dry delivery and commitment to character. He frequently uses invented metrics
+              such as “Confusion Index” and “Laugh Velocity” to describe content<span class="citation-needed">[citation
+                needed]</span>.</p>
 
             <h2 id="trivia">Trivia</h2>
             <ul>
@@ -270,7 +318,9 @@
             </ul>
 
             <h2 id="legacy">Legacy</h2>
-            <p>Turani’s work at Barstool Sports is characterized by its unpredictability and commitment to absurdity. His influence is felt across multiple shows and formats, particularly in the blending of satire and sincerity.</p>
+            <p>Turani’s work at Barstool Sports is characterized by its unpredictability and commitment to absurdity.
+              His influence is felt across multiple shows and formats, particularly in the blending of satire and
+              sincerity.</p>
 
             <h2 id="references">References</h2>
             <ol class="references">
@@ -284,43 +334,55 @@
 
           <table class="infobox">
             <tbody>
-              <tr class="header"><th colspan="2">Nick Turani</th></tr>
-              <tr><th>Born</th><td>Wheeling, West Virginia</td></tr>
-              <tr><th>Known for</th><td>Barstool Sports, The Yak, A New Untold Story</td></tr>
-              <tr><th>Height</th><td>6'0"</td></tr>
-              <tr><th>Occupation</th><td>Podcaster, Comedian, Editor</td></tr>
-              <tr><th>Years active</th><td>2019–present</td></tr>
-              <tr><th>Nickname</th><td>TBD</td></tr>
-              <tr class="section-header"><th colspan="2">Nick-related articles</th></tr>
-              <tr><td colspan="2">
-                <ul>
-                  <li><a href="#">KB NoSwag</a></li>
-                  <li><a href="#">The Yak</a></li>
-                  <li><a href="#">A New Untold Story</a></li>
-                  <li><a href="#">The Bracket</a></li>
-                  <li><a href="#">Rough N’ Rowdy</a></li>
-                </ul>
-              </td></tr>
+              <tr class="header">
+                <th colspan="2">Nick Turani</th>
+              </tr>
+              <tr>
+                <th>Born</th>
+                <td>Wheeling, West Virginia</td>
+              </tr>
+              <tr>
+                <th>Known for</th>
+                <td>Barstool Sports, The Yak, A New Untold Story</td>
+              </tr>
+              <tr>
+                <th>Height</th>
+                <td>6'0"</td>
+              </tr>
+              <tr>
+                <th>Occupation</th>
+                <td>Podcaster, Comedian, Editor</td>
+              </tr>
+              <tr>
+                <th>Years active</th>
+                <td>2019–present</td>
+              </tr>
+              <tr>
+                <th>Nickname</th>
+                <td>TBD</td>
+              </tr>
+              <tr class="section-header">
+                <th colspan="2">Nick-related articles</th>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <ul>
+                    <li><a href="#">KB NoSwag</a></li>
+                    <li><a href="#">The Yak</a></li>
+                    <li><a href="#">A New Untold Story</a></li>
+                    <li><a href="#">The Bracket</a></li>
+                    <li><a href="#">Rough N’ Rowdy</a></li>
+                  </ul>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
       </article>
     </div>
 
-    <!-- GISCUS COMMENTS -->
-    <div style="max-width:95%;margin:3rem auto;">
-      <div class="giscus"></div>
-      <script src="https://giscus.app/client.js"
-        data-repo="YOUR/REPO"
-        data-repo-id="R_kgDO..."
-        data-category="Comments"
-        data-category-id="DIC_..."
-        data-mapping="pathname"
-        data-reactions-enabled="1"
-        data-theme="light"
-        crossorigin="anonymous" async>
-      </script>
-    </div>
+
   </div>
 </body>
+
 </html>
