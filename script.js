@@ -89,3 +89,10 @@ document.querySelectorAll('.nav-link').forEach(link => {
         clarity('event', 'Nav Click: ' + link.textContent.trim());
     });
 });
+
+// Track article link clicks
+document.querySelectorAll('.art-link').forEach(link => {
+    link.addEventListener('click', () => {
+        clarity('event', 'Article Click: ' + link.textContent.trim());
+    });
+});
